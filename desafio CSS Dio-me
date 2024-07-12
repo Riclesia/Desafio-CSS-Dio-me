@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dio-me</title>
+  <style>
+    /* Estilos CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      background-color: #f2f2f2;
+      padding: 10px;
+      text-align: center;
+    }
+
+    nav a {
+      color: #333;
+      text-decoration: none;
+      margin: 0 10px;
+    }
+
+    nav a:hover {
+      color: #666;
+    }
+
+    main {
+      padding: 20px;
+    }
+
+    .hero {
+      background-image: url('hero-image.jpg');
+      background-size: cover;
+      background-position: center;
+      color: #fff;
+      padding: 100px 20px;
+      text-align: center;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 18px;
+      margin-bottom: 40px;
+    }
+
+    .btn {
+      background-color: #333;
+      border: none;
+      color: #fff;
+      padding: 10px 20px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #666;
+    }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Dio-me</h1>
+  </header>
+
+  <nav>
+    <a href="#">Home</a>
+    <a href="#">Sobre</a>
+    <a href="#">Serviços</a>
+    <a href="#">Contato</a>
+  </nav>
+
+  <main>
+    <section class="hero">
+      <h1>Bem-vindo à Dio-me</h1>
+      <p>Sua solução completa em serviços digitais</p>
+      <a href="#" class="btn">Saiba Mais</a>
+    </section>
+
+    <section>
+      <h2>Sobre a Dio-me</h2>
+      <p>A Dio-me é uma empresa especializada em serviços digitais. Oferecemos soluções completas para suas necessidades online, desde o desenvolvimento de sites até a gestão de redes sociais.</p>
+    </section>
+
+    <section>
+      <h2>Nossos Serviços</h2>
+      <ul>
+        <li>Desenvolvimento de sites</li>
+        <li>Gestão de redes sociais</li>
+        <li>Marketing digital</li>
+        <li>Consultoria em tecnologia</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>Contato</h2>
+      <form>
+        <label for="name">Nome:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensagem:</label>
+        <textarea id="message" name="message" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Dio-me. Todos os direitos reservados.</p>
+  </footer>
+
+  <script>
+    // JavaScript para interatividade
+    document.querySelectorAll('nav a').forEach(link => {
+      link.addEventListener('click', (event) => {
+        event.preventDefault();
+        const targetSection = document.querySelector(event.target.getAttribute('href'));
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+      });
+    });
+
+    document.querySelector('form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      alert('Mensagem enviada com sucesso!');
+      event.target.reset();
+    });
+  </script>
+</body>
+</html>
